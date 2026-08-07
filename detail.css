@@ -1,0 +1,185 @@
+/* ===========================
+   Detail Pages - Layout Only
+   Card styles come from style.css (.bento__item)
+   =========================== */
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Page Layout */
+.detail-page {
+  padding: 120px 24px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detail-page__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: 'Germania One', cursive;
+  margin-bottom: 8px;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.detail-page__subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+/* Cards Grid */
+.detail-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card Header with Logo */
+.detail-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-card__logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-card__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.detail-card__header h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: cursive;
+  margin-bottom: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.detail-card__company {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.detail-card__date {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'JetBrains Mono', monospace;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Card Body */
+.detail-card__body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: cursive;
+  color: #ffffff;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.detail-card__body h3:first-child {
+  margin-top: 0;
+}
+
+.detail-card__body p {
+  font-size: 0.92rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.detail-card__body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-card__body ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+.detail-card__body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Tags - same as .project-card__tags in style.css */
+.detail-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.detail-card__tags span {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Links */
+.detail-card__links {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .detail-page {
+    padding: 100px 16px 40px;
+  }
+
+  .detail-page__title {
+    font-size: 2rem;
+  }
+
+  .detail-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .detail-card__links {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience | Arghya Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Germania+One&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <!-- SVG Filter for Glass Distortion -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.009 0.009" numOctaves="2" seed="92" result="noise"/>
+                <feGaussianBlur in="noise" stdDeviation="2" result="blurred"/>
+                <feDisplacementMap in="SourceGraphic" in2="blurred" scale="141" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- 3D Gradient Background -->
+    <div class="spline-bg">
+        <iframe src="https://my.spline.design/3dgradient-AcpgG6LxFkpnJSoowRHPfcbO" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="portfolio">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-text">Arghya Dev</span>
+            </a>
+            <a href="index.html#section-2" class="btn btn--ghost">&larr; Back</a>
+        </nav>
+
+        <main class="detail-page">
+            <h1 class="detail-page__title">Work Experience</h1>
+            <p class="detail-page__subtitle">A detailed look at my professional journey</p>
+
+            <div class="detail-cards">
+                <a href="work-amazon.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <img src="amazon.jpg" alt="Amazon" class="detail-card__logo">
+                        <div>
+                            <h2>System Development Engineer</h2>
+                            <p class="detail-card__company">Amazon &mdash; A9 Search</p>
+                            <span class="detail-card__date">2022 - Present</span>
+                        </div>
+                    </div>
+                    <div class="detail-card__body">
+                        <p>Building and maintaining Search Support Tools — internal diagnostic tools for identifying and resolving search ranking and indexing issues across Amazon marketplaces.</p>
+                        <div class="detail-card__tags">
+                            <span>Java</span><span>Python</span><span>AWS</span><span>Distributed Systems</span><span>Kubernetes</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="work-zoho.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <img src="zoho.png" alt="Zoho" class="detail-card__logo">
+                        <div>
+                            <h2>Backend Engineer</h2>
+                            <p class="detail-card__company">Zoho &mdash; Video Platform</p>
+                            <span class="detail-card__date">2020 - 2022</span>
+                        </div>
+                    </div>
+                    <div class="detail-card__body">
+                        <p>Built APIs and handled server-side operations for Zoho Video Platform. Event-driven architecture and real-time data pipelines processing 500K events/sec.</p>
+                        <div class="detail-card__tags">
+                            <span>Java</span><span>Python</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Docker</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

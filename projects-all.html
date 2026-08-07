@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Arghya Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Germania+One&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <!-- SVG Filter for Glass Distortion -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.009 0.009" numOctaves="2" seed="92" result="noise"/>
+                <feGaussianBlur in="noise" stdDeviation="2" result="blurred"/>
+                <feDisplacementMap in="SourceGraphic" in2="blurred" scale="141" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- 3D Gradient Background -->
+    <div class="spline-bg">
+        <iframe src="https://my.spline.design/3dgradient-AcpgG6LxFkpnJSoowRHPfcbO" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="portfolio">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-text">Arghya Dev</span>
+            </a>
+            <a href="index.html#section-3" class="btn btn--ghost">&larr; Back</a>
+        </nav>
+
+        <main class="detail-page">
+            <h1 class="detail-page__title">All Projects</h1>
+            <p class="detail-page__subtitle">Everything I've built and contributed to</p>
+
+            <div class="detail-cards">
+                <a href="project-task-queue.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <div class="detail-card__icon">&#128230;</div>
+                        <div>
+                            <h2>Distributed Task Queue</h2>
+                            <p class="detail-card__company">High-throughput task processing with priority scheduling</p>
+                        </div>
+                    </div>
+                    <div class="detail-card__tags">
+                        <span>Go</span><span>Redis</span><span>gRPC</span>
+                    </div>
+                </a>
+
+                <a href="project-api-gateway.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <div class="detail-card__icon">&#9729;</div>
+                        <div>
+                            <h2>API Gateway</h2>
+                            <p class="detail-card__company">Rate limiting, circuit breaker, request transformation</p>
+                        </div>
+                    </div>
+                    <div class="detail-card__tags">
+                        <span>Python</span><span>FastAPI</span><span>Docker</span>
+                    </div>
+                </a>
+
+                <a href="project-analytics.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <div class="detail-card__icon">&#128202;</div>
+                        <div>
+                            <h2>Real-time Analytics</h2>
+                            <p class="detail-card__company">Stream processing for metrics and anomaly detection</p>
+                        </div>
+                    </div>
+                    <div class="detail-card__tags">
+                        <span>Java</span><span>Kafka</span><span>Flink</span>
+                    </div>
+                </a>
+
+                <a href="project-auth.html" class="bento__item visible">
+                    <div class="detail-card__header">
+                        <div class="detail-card__icon">&#128274;</div>
+                        <div>
+                            <h2>Auth Service</h2>
+                            <p class="detail-card__company">OAuth 2.0 / OIDC with MFA and session management</p>
+                        </div>
+                    </div>
+                    <div class="detail-card__tags">
+                        <span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

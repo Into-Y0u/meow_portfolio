@@ -1,0 +1,39 @@
+// ===========================
+// Variables & Theme - Glassmorphism + Gold
+// ===========================
+$bg-primary: #0a0a0f;
+$bg-secondary: #12121a;
+$bg-card: rgba(22, 22, 31, 0.6);
+$bg-card-hover: rgba(28, 28, 40, 0.7);
+
+$border-color: rgba(255, 215, 0, 0.08);
+$border-hover: rgba(255, 215, 0, 0.2);
+
+$text-primary: #f0f0f5;
+$text-secondary: #a0a0b5;
+$text-muted: #6a6a80;
+
+$gold: #daa520;
+$gold-light: #ffd700;
+$gold-dark: #b8860b;
+
+$color-lang: #a78bfa;
+$color-infra: #4ecdc4;
+$color-db: #ff6b6b;
+$color-tool: #ffd93d;
+
+$font-main: 'Asul', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+$radius-sm: 10px;
+$radius-md: 20px;
+$radius-lg: 24px;
+
+$glass-blur: blur(16px);
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+
+// Note: This SCSS source matches the compiled style.css
+// Compile with: sass style.scss style.css
+// The compiled CSS is already provided as style.css
