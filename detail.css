@@ -67,7 +67,7 @@ a:focus {
 }
 
 .detail-card__header h2 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: 500;
   font-family: cursive;
   margin-bottom: 2px;
@@ -76,7 +76,7 @@ a:focus {
 }
 
 .detail-card__company {
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -181,5 +181,12 @@ a:focus {
 
   .detail-card__links {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 968px) {
+  .detail-page {
+    padding: 100px 16px 40px;
+    min-height: 100vh;
   }
 }

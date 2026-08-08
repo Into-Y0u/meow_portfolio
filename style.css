@@ -10,6 +10,8 @@
 html {
   scroll-behavior: auto;
   font-size: 16px;
+  height: auto;
+  overflow: auto;
 }
 
 body {
@@ -21,11 +23,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   font-size: 18px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 body.has-scroll-container {
   overflow: hidden;
   height: 100vh;
+  -webkit-overflow-scrolling: auto;
+}
+
+@media (max-width: 968px) {
+  body.has-scroll-container {
+    overflow-y: auto;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 a,
@@ -79,7 +92,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 40px;
+  padding: 0px clamp(16px, 4vw, 40px);
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +112,7 @@ ul {
 
 .nav__logo {
   font-family: 'Bonheur Royale', cursive;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 800;
 }
 
@@ -150,8 +163,14 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
   z-index: 101;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__menu-btn span {
@@ -402,9 +421,9 @@ ul {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  font-size: 1.1rem;
+  gap: clamp(4px, 1vw, 8px);
+  padding: clamp(8px, 1.5vw, 12px) clamp(14px, 3vw, 28px);
+  font-size: clamp(0.75rem, 2vw, 1.1rem);
   font-weight: 400;
   font-family: 'Germania One', cursive;
   cursor: pointer;
@@ -412,6 +431,7 @@ ul {
   transition: all 0.3s ease;
   text-decoration: none !important;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .btn--primary {
@@ -793,25 +813,23 @@ ul {
    Timeline with Company Logos
    =========================== */
 .timeline__logo {
-  width: 64px;
-  height: 64px;
+  width: clamp(40px, 10vw, 64px);
+  height: clamp(40px, 10vw, 64px);
   border-radius: 8px;
   object-fit: contain;
   background: rgba(255, 255, 255, 0.05);
   padding: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
 .timeline__company-name {
-  font-size: 1 rem;
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
   font-weight: 700;
   margin-bottom: -10px;
   color: #ffffff;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-  font-size: 1.8rem;
   font-family: cursive;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .timeline__company {
@@ -1040,11 +1058,11 @@ ul {
 .social-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: clamp(4px, 1vw, 8px);
+  padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 16px);
   position: relative;
   border-radius: 10px;
-  font-size: 0.82rem;
+  font-size: clamp(0.7rem, 2vw, 0.82rem);
   font-weight: 500;
   border: none;
   background: transparent;
@@ -1293,19 +1311,23 @@ ul {
 
 .timeline__company-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: clamp(10px, 2vw, 16px);
   margin-bottom: 8px;
 }
 
 .timeline__info {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 
 
+
 .timeline__role {
-  font-size: 1rem;
+  font-size: clamp(0.65rem, 2vw, 0.9rem);
   color: rgba(255, 255, 255, 0.75);
   font-family: cursive;
   font-weight: 700;
@@ -1313,12 +1335,10 @@ ul {
 }
 
 .timeline__date {
-  font-size: 0.99rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  color: rgba(255, 255, 255, 0.6);
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-weight: 500;
-  white-space: nowrap;
-  margin-left: auto;
 }
 
 .timeline__desc {
@@ -1369,7 +1389,7 @@ ul {
 }
 
 .education-item__school {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
   color: rgba(255, 255, 255, 0.75);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -1462,7 +1482,7 @@ ul {
 
 .bento__social .social-links {
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .bento__social .bento__item-header {
